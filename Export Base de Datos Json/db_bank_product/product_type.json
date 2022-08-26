@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("62f0c7aab2d3ae40b08f56e5"),
+    "code" : "CBA",
+    "name" : "CUENTAS BANCARIAS",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.ProductType"
+}
+{
+    "_id" : ObjectId("62f0c7c2b2d3ae40b08f56e6"),
+    "code" : "CRE",
+    "name" : "CUENTAS DE CREDITO",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.ProductType"
+}

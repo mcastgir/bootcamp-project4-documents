@@ -1,0 +1,72 @@
+{
+    "_id" : ObjectId("62f0c3e4b2d3ae40b08f56dd"),
+    "code" : "CTA-AHR",
+    "name" : "CUENTA DE AHORRO",
+    "description" : "CUENTA DE AHORRO",
+    "codeProductType" : "CBA",
+    "movementControl" : true,
+    "movementCountMax" : NumberInt(10),
+    "monthlyCommission" : 0.0,
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.Product"
+}
+{
+    "_id" : ObjectId("62f0c482b2d3ae40b08f56de"),
+    "code" : "CTA-CRT",
+    "name" : "CUENTA CORRIENTE",
+    "description" : "CUENTA CORRIENTE",
+    "codeProductType" : "CBA",
+    "movementControl" : false,
+    "movementCountMax" : NumberInt(0),
+    "monthlyCommission" : 12.0,
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.Product"
+}
+{
+    "_id" : ObjectId("62f0c4cfb2d3ae40b08f56df"),
+    "code" : "CTA-PLZ",
+    "name" : "CUENTA PLAZO FIJO",
+    "description" : "CUENTA PLAZO FIJO",
+    "codeProductType" : "CBA",
+    "movementControl" : true,
+    "movementCountMax" : NumberInt(1),
+    "monthlyCommission" : 0.0,
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.Product"
+}
+{
+    "_id" : ObjectId("62f0c52bb2d3ae40b08f56e0"),
+    "code" : "CRE-PER",
+    "name" : "CREDITO PERSONAL",
+    "description" : "CREDITO PERSONAL",
+    "codeProductType" : "CRE",
+    "movementControl" : false,
+    "movementCountMax" : NumberInt(0),
+    "monthlyCommission" : 0.0,
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.Product"
+}
+{
+    "_id" : ObjectId("62f0c540b2d3ae40b08f56e1"),
+    "code" : "CRE-EMP",
+    "name" : "CREDITO EMPRESARIAL",
+    "description" : "CREDITO EMPRESARIAL",
+    "codeProductType" : "CRE",
+    "movementControl" : false,
+    "movementCountMax" : NumberInt(0),
+    "monthlyCommission" : 0.0,
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.Product"
+}
+{
+    "_id" : ObjectId("62f0c56db2d3ae40b08f56e2"),
+    "code" : "CRE-TRJ",
+    "name" : "TARJETA DE CREDITO",
+    "description" : "TARJETA DE CREDITO",
+    "codeProductType" : "CRE",
+    "movementControl" : false,
+    "movementCountMax" : NumberInt(0),
+    "monthlyCommission" : 0.0,
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.product.model.document.Product"
+}

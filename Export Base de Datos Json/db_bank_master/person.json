@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("62eff17ff7606e785da5fb59"),
+    "code" : "PERS-0001",
+    "name" : "JUAN",
+    "lastName" : "PEREZ",
+    "codeDocumentType" : "DNI",
+    "documentNumber" : "43098451",
+    "phoneNumber" : "997876315",
+    "email" : "jperez@gmail.com",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.master.model.Person"
+}
+{
+    "_id" : ObjectId("62eff1d7f7606e785da5fb5a"),
+    "code" : "PERS-0002",
+    "name" : "LUIS",
+    "lastName" : "GARCIA",
+    "codeDocumentType" : "DNI",
+    "documentNumber" : "47954609",
+    "phoneNumber" : "995743986",
+    "email" : "lgarcia@gmail.com",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.master.model.Person"
+}

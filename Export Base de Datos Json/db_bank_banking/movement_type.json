@@ -1,0 +1,80 @@
+{
+    "_id" : ObjectId("62f0b098e8f3b41b05194cd1"),
+    "code" : "RE",
+    "name" : "RETIRO DE CAJERO",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b0bae8f3b41b05194cd2"),
+    "code" : "DE",
+    "name" : "DEPOSITO EN CAJERO",
+    "operationType" : "I",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b0dde8f3b41b05194cd3"),
+    "code" : "RV",
+    "name" : "RETIRO EN VENTANILLA",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b0e9e8f3b41b05194cd4"),
+    "code" : "DV",
+    "name" : "DEPOSITO EN VENTANILLA",
+    "operationType" : "I",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b13ee8f3b41b05194cd5"),
+    "code" : "TB",
+    "name" : "TRANSFERENCIA BANCARIA A CUENTAS PROPIAS",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b14ce8f3b41b05194cd6"),
+    "code" : "TT",
+    "name" : "TRANSFERENCIA BANCARIA A CUENTA DE TERCEROS",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b15be8f3b41b05194cd7"),
+    "code" : "TI",
+    "name" : "TRANSFERENCIA INTERBANCARIA",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f0b603e8f3b41b05194cd9"),
+    "code" : "CM",
+    "name" : "COMISION MENSUAL",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f3eb77c2ae394097a34fcd"),
+    "code" : "PP",
+    "name" : "PAGO POR POS",
+    "operationType" : "S",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}
+{
+    "_id" : ObjectId("62f3ec58c2ae394097a34fd0"),
+    "code" : "PC",
+    "name" : "PAGO DE CREDITO",
+    "operationType" : "I",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.MovementType"
+}

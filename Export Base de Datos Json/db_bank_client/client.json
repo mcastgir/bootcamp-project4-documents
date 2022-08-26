@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("62f007964bc4aa2974139c16"),
+    "code" : "CLIE-0001",
+    "name" : "CARLOS CACERES CASTILLO",
+    "codeDocumentType" : "DNI",
+    "documentNumber" : "45691256",
+    "codeClientType" : "PER",
+    "phoneNumber" : "990675002",
+    "email" : "ccaceres@gmail.com",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.client.models.Client"
+}
+{
+    "_id" : ObjectId("62f0080f4bc4aa2974139c17"),
+    "code" : "CLIE-0002",
+    "name" : "ABC COMPANY S.A.C.",
+    "codeDocumentType" : "RUC",
+    "documentNumber" : "20895364583",
+    "codeClientType" : "EMP",
+    "phoneNumber" : "990560332",
+    "email" : "administracion@abccompany.com",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.client.models.Client"
+}

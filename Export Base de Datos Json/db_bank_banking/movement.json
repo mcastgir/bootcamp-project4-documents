@@ -1,0 +1,66 @@
+{
+    "_id" : ObjectId("62f3e87fc2ae394097a34fc9"),
+    "code" : "ec59457c-e36d-4f49-b60f-4eb967261212",
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "dateRegister" : ISODate("2022-08-10T17:18:01.641+0000"),
+    "codeMovementType" : "DE",
+    "previousAmount" : 0.0,
+    "movementAmount" : 100.0,
+    "finalAmount" : 100.0,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Movement"
+}
+{
+    "_id" : ObjectId("62f3e8bbc2ae394097a34fca"),
+    "code" : "d397c4f7-ae10-48a2-8e8b-16bc021e61d7",
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "dateRegister" : ISODate("2022-08-10T17:19:52.019+0000"),
+    "codeMovementType" : "DE",
+    "previousAmount" : 100.0,
+    "movementAmount" : 200.0,
+    "finalAmount" : 300.0,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Movement"
+}
+{
+    "_id" : ObjectId("62f3e934c2ae394097a34fcb"),
+    "code" : "0ab6f72b-99e3-494c-8b43-189959b7ef27",
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "dateRegister" : ISODate("2022-08-10T17:21:42.296+0000"),
+    "codeMovementType" : "RE",
+    "previousAmount" : 300.0,
+    "movementAmount" : 50.0,
+    "finalAmount" : 250.0,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Movement"
+}
+{
+    "_id" : ObjectId("62f42c9ceff2d72b8b73a961"),
+    "code" : "40bda0d6-440d-4046-9c92-c062a99415cc",
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "dateRegister" : ISODate("2022-08-10T22:09:31.602+0000"),
+    "codeMovementType" : "DE",
+    "previousAmount" : 250.0,
+    "movementAmount" : 150.0,
+    "finalAmount" : 400.0,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Movement"
+}
+{
+    "_id" : ObjectId("62f42cdaeff2d72b8b73a962"),
+    "code" : "89ee9d44-531d-4f4c-807c-30a462e89874",
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "dateRegister" : ISODate("2022-08-10T22:10:34.667+0000"),
+    "codeMovementType" : "RE",
+    "previousAmount" : 400.0,
+    "movementAmount" : 100.0,
+    "finalAmount" : 300.0,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Movement"
+}
+{
+    "_id" : ObjectId("62f42db8eff2d72b8b73a964"),
+    "code" : "9a56a448-48a3-427c-9fbf-0d2b9af0e401",
+    "accountNumber" : "a0cf3a15-ace5-46fc-8fa9-b4d1d586b8df",
+    "dateRegister" : ISODate("2022-08-10T22:14:16.957+0000"),
+    "codeMovementType" : "PP",
+    "previousAmount" : 3000.0,
+    "movementAmount" : 230.0,
+    "finalAmount" : 2770.0,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Movement"
+}

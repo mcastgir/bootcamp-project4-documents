@@ -1,0 +1,28 @@
+{
+    "_id" : ObjectId("62f0a6fdf869dc326b8cbd82"),
+    "code" : "RA",
+    "name" : "REQUEST ACCOUNT",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.AccountState"
+}
+{
+    "_id" : ObjectId("62f0a73cf869dc326b8cbd83"),
+    "code" : "AA",
+    "name" : "ACCEPTED ACCOUNT",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.AccountState"
+}
+{
+    "_id" : ObjectId("62f0a76cf869dc326b8cbd84"),
+    "code" : "CA",
+    "name" : "CANCELLED ACCOUNT",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.AccountState"
+}
+{
+    "_id" : ObjectId("62f0a802f869dc326b8cbd85"),
+    "code" : "BA",
+    "name" : "BLOCKED ACCOUNT",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.AccountState"
+}

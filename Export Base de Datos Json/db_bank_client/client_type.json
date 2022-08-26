@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("62f0041b4bc4aa2974139c13"),
+    "code" : "PER",
+    "name" : "PERSONAL",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.client.models.ClientType"
+}
+{
+    "_id" : ObjectId("62f004314bc4aa2974139c14"),
+    "code" : "EMP",
+    "name" : "EMPRESARIAL",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.client.models.ClientType"
+}

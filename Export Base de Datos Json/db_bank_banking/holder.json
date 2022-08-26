@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("62f0aa8ef869dc326b8cbd87"),
+    "codePerson" : "PERS-0001",
+    "accountNumber" : "19101967097074",
+    "dateRegister" : ISODate("2022-08-06T00:00:00.000+0000"),
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Holder"
+}
+{
+    "_id" : ObjectId("62f0aab4f869dc326b8cbd88"),
+    "codePerson" : "PERS-0002",
+    "accountNumber" : "19101967097074",
+    "dateRegister" : ISODate("2022-08-06T00:00:00.000+0000"),
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Holder"
+}
+{
+    "_id" : ObjectId("62faddc30a458c421c1ea195"),
+    "codePerson" : "PERS-0001",
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "dateRegister" : ISODate("2022-08-06T00:00:00.000+0000"),
+    "state" : false,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Holder"
+}

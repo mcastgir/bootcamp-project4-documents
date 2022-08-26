@@ -1,0 +1,1802 @@
+{
+	"info": {
+		"_postman_id": "86508397-c6c9-4950-9fd9-41424ef823b0",
+		"name": "Project Banking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22628550"
+	},
+	"item": [
+		{
+			"name": "Service Master",
+			"item": [
+				{
+					"name": "Actuator",
+					"item": [
+						{
+							"name": "Actuator Endpoints",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8085/actuator",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Person",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"PERS-0003\",\r\n    \"name\": \"CARLOS\",\r\n    \"lastName\": \"CACERES\",\r\n    \"codeDocumentType\": \"CEX\",\r\n    \"documentNumber\": \"01986548\",\r\n    \"phoneNumber\": \"990675002\",\r\n    \"email\": \"ccaceres@gmail.com\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/persons",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": \"62eff1d7f7606e785da5fb5a\",\r\n        \"code\": \"PERS-0002\",\r\n        \"name\": \"LUIS\",\r\n        \"lastName\": \"GARCIA\",\r\n        \"codeDocumentType\": \"DNI\",\r\n        \"documentNumber\": \"47954609\",\r\n        \"phoneNumber\": \"995743986\",\r\n        \"email\": \"lgarcia@gmail.com\",\r\n        \"state\": true\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/persons",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/persons/62eff376f7606e785da5fb5c",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"persons",
+										"62eff376f7606e785da5fb5c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/persons/62eff17ff7606e785da5fb59",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"persons",
+										"62eff17ff7606e785da5fb59"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/persons/findByCode/PERS-0001",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"persons",
+										"findByCode",
+										"PERS-0001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/persons",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"persons"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Document Type",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"OTR\",\r\n    \"name\": \"OTRO TIPO DE DOCUMENTO\",\r\n    \"description\": \"OTRO TIPO DE DOCUMENTO\",\r\n    \"state\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/documenttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"documenttypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": \"62ef59a507695c058093a662\",\r\n        \"code\": \"OTR 1\",\r\n        \"name\": \"OTRO TIPO DE DOCUMENTO 1\",\r\n        \"description\": \"OTRO TIPO DE DOCUMENTO 1\",\r\n        \"state\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/documenttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"documenttypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/documenttypes/62ef59a507695c058093a662",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"documenttypes",
+										"62ef59a507695c058093a662"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/documenttypes/62ef59a507695c058093a662",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"documenttypes",
+										"62ef59a507695c058093a662"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/documenttypes/findByCode/DNI",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"documenttypes",
+										"findByCode",
+										"DNI"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/documenttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"documenttypes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Service Client",
+			"item": [
+				{
+					"name": "Actuator",
+					"item": [
+						{
+							"name": "Actuator Endpoints",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8086/actuator",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"CLIE-0003\",\r\n    \"name\": \"LUIS GARCIA SANDOVAL\",\r\n    \"codeDocumentType\": \"DNI\",\r\n    \"documentNumber\": \"48706582\",\r\n    \"codeClientType\": \"PER\",\r\n    \"phoneNumber\": \"990675002\",\r\n    \"email\": \"lgarcia@gmail.com\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/clients",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62fac9ed2f9c460bc233a020\",\r\n    \"code\": \"CLIE-0003\",\r\n    \"name\": \"LUIS ANTONIO GARCIA SANDOVAL\",\r\n    \"codeDocumentType\": \"DNI\",\r\n    \"documentNumber\": \"48706582\",\r\n    \"codeClientType\": \"PER\",\r\n    \"phoneNumber\": \"990675002\",\r\n    \"email\": \"lgarcia1@gmail.com\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/clients",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clients/62fac9ed2f9c460bc233a020",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clients",
+										"62fac9ed2f9c460bc233a020"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clients/62f0080f4bc4aa2974139c17",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clients",
+										"62f0080f4bc4aa2974139c17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clients/findByCode/CLIE-0001",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clients",
+										"findByCode",
+										"CLIE-0001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clients",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client Type",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"OTR\",\r\n    \"name\": \"OTRO\",\r\n    \"state\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/clienttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clienttypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62facb252f9c460bc233a021\",\r\n    \"code\": \"OTR!\",\r\n    \"name\": \"OTRO !\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/clienttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clienttypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clienttypes/62facb252f9c460bc233a021",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clienttypes",
+										"62facb252f9c460bc233a021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clienttypes/62f0041b4bc4aa2974139c13",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clienttypes",
+										"62f0041b4bc4aa2974139c13"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clienttypes/findByCode/PER",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clienttypes",
+										"findByCode",
+										"PER"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/clienttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"clienttypes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Service Product",
+			"item": [
+				{
+					"name": "Actuator",
+					"item": [
+						{
+							"name": "Actuator Endpoints",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8087/actuator",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Credito",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"CRE-OTR\",\r\n    \"name\": \"OTRO CREDITO\",\r\n    \"description\": \"OTRO CREDITO\",\r\n    \"codeProductType\": \"CRE\",\r\n    \"movementControl\": false,\r\n    \"movementCountMax\": 0,\r\n    \"monthlyCommission\": 0.00,\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62facc8a35d79d66a54b2803\",\r\n    \"code\": \"CRE-OTR\",\r\n    \"name\": \"OTRO CREDITO 1\",\r\n    \"description\": \"OTRO CREDITO 1\",\r\n    \"codeProductType\": \"CRE\",\r\n    \"movementControl\": false,\r\n    \"movementCountMax\": 0,\r\n    \"monthlyCommission\": 0.0,\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/products/62facc8a35d79d66a54b2803",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"products",
+										"62facc8a35d79d66a54b2803"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/products/62f0c56db2d3ae40b08f56e2",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"products",
+										"62f0c56db2d3ae40b08f56e2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/products/findByCode/CRE-TRJ",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"products",
+										"findByCode",
+										"CRE-TRJ"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Type",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"OTR\",\r\n    \"name\": \"OTRAS CUENTAS\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/producttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"producttypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62facd2035d79d66a54b2804\",\r\n    \"code\": \"OTR\",\r\n    \"name\": \"OTRAS CUENTAS 1\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/producttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"producttypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/producttypes/62facd2035d79d66a54b2804",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"producttypes",
+										"62facd2035d79d66a54b2804"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/producttypes/62f0c7c2b2d3ae40b08f56e6",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"producttypes",
+										"62f0c7c2b2d3ae40b08f56e6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/producttypes/findByCode/CBA",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"producttypes",
+										"findByCode",
+										"CBA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/producttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"producttypes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Service Banking",
+			"item": [
+				{
+					"name": "Actuator",
+					"item": [
+						{
+							"name": "Actuator Endpoints",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8088/actuator",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeClient\": \"CLIE-0001\",\r\n    \"codeProduct\": \"CTA-AHR\",\r\n    \"creditLine\": 0.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62f09db5f869dc326b8cbd80\",\r\n    \"accountNumber\": \"19101967097067\",\r\n    \"accountInterbankNumber\": \"00219110197506707301\",\r\n    \"codeClient\": \"CLIE-0002\",\r\n    \"codeProduct\": \"PROD-0002\",\r\n    \"dateRegister\": \"2022-08-07T00:00:00.000+00:00\",\r\n    \"creditLine\": 3500.0,\r\n    \"codeAccountState\": \"RA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8084/api/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/accounts/62f09ecff869dc326b8cbd81",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"accounts",
+										"62f09ecff869dc326b8cbd81"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/accounts/62f09a398f65292389403118",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"accounts",
+										"62f09a398f65292389403118"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Account Number",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/accounts/findByAccountNumber/3db3e59b-1b5b-4eb7-a1cc-cc5840203256",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"accounts",
+										"findByAccountNumber",
+										"3db3e59b-1b5b-4eb7-a1cc-cc5840203256"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All By Code Client",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8084/api/accounts/findAllByCodeClient/CLIE-0001",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"accounts",
+										"findAllByCodeClient",
+										"CLIE-0001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account State",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"XA\",\r\n    \"name\": \"X ACCOUNT\",\r\n    \"state\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/accountstates",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accountstates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62fadd0f0a458c421c1ea194\",\r\n    \"code\": \"XA\",\r\n    \"name\": \"X ACCOUNT 1\",\r\n    \"state\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/accountstates",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accountstates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/accountstates/62fadd0f0a458c421c1ea194",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accountstates",
+										"62fadd0f0a458c421c1ea194"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/accountstates/62f0a76cf869dc326b8cbd84",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accountstates",
+										"62f0a76cf869dc326b8cbd84"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/accountstates/findByCode/RA",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accountstates",
+										"findByCode",
+										"RA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/accountstates",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"accountstates"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Holder",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codePerson\": \"PERS-0001\",\r\n    \"accountNumber\": \"433a3cf3-88ac-465f-b955-cdeb7272b4c6\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/holders",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"holders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62faddc30a458c421c1ea195\",\r\n    \"codePerson\": \"PERS-0001\",\r\n    \"accountNumber\": \"433a3cf3-88ac-465f-b955-cdeb7272b4c6\",\r\n    \"dateRegister\": 1659744000000,\r\n    \"state\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/holders",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"holders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/holders/62f0aabdf869dc326b8cbd89",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"holders",
+										"62f0aabdf869dc326b8cbd89"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/holders/62f0aa8ef869dc326b8cbd87",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"holders",
+										"62f0aa8ef869dc326b8cbd87"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/holders",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"holders"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movement",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"a0cf3a15-ace5-46fc-8fa9-b4d1d586b8df\",\r\n    \"codeMovementType\": \"PP\",\r\n    \"movementAmount\": 230.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/movements",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62f0b6c2e8f3b41b05194cdc\",\r\n    \"code\": \"20220808-00000002\",\r\n    \"accountNumber\": \"19101967097067\",\r\n    \"dateRegister\": \"2022-08-08T00:00:00.000+00:00\",\r\n    \"codeMovementType\": \"RE\",\r\n    \"currentAmount\": 3500.0,\r\n    \"movementAmount\": 200.0,\r\n    \"finalAmount\": 3300.0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/movements",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movements/62f0b70ce8f3b41b05194cdd",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements",
+										"62f0b70ce8f3b41b05194cdd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movements/62f0b678e8f3b41b05194cdb",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements",
+										"62f0b678e8f3b41b05194cdb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movements/findByCode/20220808-00000001",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements",
+										"findByCode",
+										"20220808-00000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movements",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movement Type",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"PC\",\r\n    \"name\": \"PAGO DE CREDITO\",\r\n    \"operationType\": \"I\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/movementtypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movementtypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62f0b18ee8f3b41b05194cd8\",\r\n    \"code\": \"OT\",\r\n    \"name\": \"OTRAS TRANSFERENCIAS\",\r\n    \"operationType\": \"I\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/movementtypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movementtypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movementtypes/62f0b18ee8f3b41b05194cd8",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movementtypes",
+										"62f0b18ee8f3b41b05194cd8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movementtypes/62f0b098e8f3b41b05194cd1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movementtypes",
+										"62f0b098e8f3b41b05194cd1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movementtypes/findByCode/DE",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movementtypes",
+										"findByCode",
+										"DE"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/movementtypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movementtypes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Signer",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codePerson\": \"PERS-0001\",\r\n    \"accountNumber\": \"19101967097067\",\r\n    \"dateRegister\": \"2022-08-06T00:00:00.000+00:00\",\r\n    \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/signers",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"signers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": \"62f0ac6af869dc326b8cbd8c\",\r\n        \"codePerson\": \"PERS-0001\",\r\n        \"accountNumber\": \"19101967097067\",\r\n        \"dateRegister\": \"2022-08-06T00:00:00.000+00:00\",\r\n        \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/signers",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"signers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/signers/62f0ac6af869dc326b8cbd8c",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"signers",
+										"62f0ac6af869dc326b8cbd8c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/signers/62f0abf2f869dc326b8cbd8a",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"signers",
+										"62f0abf2f869dc326b8cbd8a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8090/api/signers",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"signers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

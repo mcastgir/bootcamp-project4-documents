@@ -1,0 +1,36 @@
+{
+    "_id" : ObjectId("62f3c061fd86d650c1e49661"),
+    "accountNumber" : "433a3cf3-88ac-465f-b955-cdeb7272b4c6",
+    "accountInterbankNumber" : "3b6659fc-7017-4efe-beec-8cd89191f27a",
+    "codeClient" : "CLIE-0001",
+    "codeProduct" : "CTA-PLZ",
+    "dateRegister" : ISODate("2022-08-10T14:27:44.191+0000"),
+    "creditLine" : 0.0,
+    "availableAmount" : 300.0,
+    "codeAccountState" : "RA",
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Account"
+}
+{
+    "_id" : ObjectId("62f41796e4ee675f2796dc63"),
+    "accountNumber" : "96b2b295-a7c3-4500-847d-bd9d91ee2dcb",
+    "accountInterbankNumber" : "22ba12ec-2c30-40c6-b7f4-2b403725374f",
+    "codeClient" : "CLIE-0001",
+    "codeProduct" : "CTA-AHR",
+    "dateRegister" : ISODate("2022-08-10T20:39:48.833+0000"),
+    "creditLine" : 0.0,
+    "availableAmount" : 0.0,
+    "codeAccountState" : "RA",
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Account"
+}
+{
+    "_id" : ObjectId("62f42d74eff2d72b8b73a963"),
+    "accountNumber" : "a0cf3a15-ace5-46fc-8fa9-b4d1d586b8df",
+    "accountInterbankNumber" : "2c0a3f7c-5232-4659-a2f0-565f0b7a31ef",
+    "codeClient" : "CLIE-0001",
+    "codeProduct" : "CRE-PER",
+    "dateRegister" : ISODate("2022-08-10T22:13:07.248+0000"),
+    "creditLine" : 3000.0,
+    "availableAmount" : 2770.0,
+    "codeAccountState" : "RA",
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Account"
+}

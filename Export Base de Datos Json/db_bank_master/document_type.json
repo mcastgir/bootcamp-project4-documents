@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("62ef58f107695c058093a65f"),
+    "code" : "DNI",
+    "name" : "DOCUMENTO NACIONAL DE IDENTIDAD",
+    "description" : "DOCUMENTO NACIONAL DE IDENTIDAD",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.master.model.DocumentType"
+}
+{
+    "_id" : ObjectId("62ef595f07695c058093a660"),
+    "code" : "CEX",
+    "name" : "CARNET DE EXTRANJERIA",
+    "description" : "CARNET DE EXTRANJERIA",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.master.model.DocumentType"
+}
+{
+    "_id" : ObjectId("62ef597f07695c058093a661"),
+    "code" : "RUC",
+    "name" : "REGISTRO UNICO DE CONTRIBUYENTE",
+    "description" : "REGISTRO UNICO DE CONTRIBUYENTE",
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.master.model.DocumentType"
+}

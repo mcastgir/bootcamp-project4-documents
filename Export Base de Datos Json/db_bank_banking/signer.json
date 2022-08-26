@@ -1,0 +1,16 @@
+{
+    "_id" : ObjectId("62f0abf2f869dc326b8cbd8a"),
+    "codePerson" : "PERS-0001",
+    "accountNumber" : "19101967097074",
+    "dateRegister" : ISODate("2022-08-06T00:00:00.000+0000"),
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Signer"
+}
+{
+    "_id" : ObjectId("62f0ac0df869dc326b8cbd8b"),
+    "codePerson" : "PERS-0002",
+    "accountNumber" : "19101967097067",
+    "dateRegister" : ISODate("2022-08-06T00:00:00.000+0000"),
+    "state" : true,
+    "_class" : "com.nttdata.bootcamp.banking.model.document.Signer"
+}
