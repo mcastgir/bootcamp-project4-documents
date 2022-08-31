@@ -1930,11 +1930,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/report/accounts",
+									"raw": "localhost:8090/api/report/accounts",
 									"host": [
 										"localhost"
 									],
-									"port": "8080",
+									"port": "8090",
 									"path": [
 										"api",
 										"report",
@@ -1955,11 +1955,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8089/api/report/accountstates",
+									"raw": "localhost:8090/api/report/accountstates",
 									"host": [
 										"localhost"
 									],
-									"port": "8089",
+									"port": "8090",
 									"path": [
 										"api",
 										"report",
@@ -1980,11 +1980,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8089/api/report/movementtypes",
+									"raw": "localhost:8090/api/report/movementtypes",
 									"host": [
 										"localhost"
 									],
-									"port": "8089",
+									"port": "8090",
 									"path": [
 										"api",
 										"report",
@@ -2005,11 +2005,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8089/api/report/accounttypes",
+									"raw": "localhost:8090/api/report/accounttypes",
 									"host": [
 										"localhost"
 									],
-									"port": "8089",
+									"port": "8090",
 									"path": [
 										"api",
 										"report",
