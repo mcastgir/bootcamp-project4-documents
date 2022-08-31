@@ -9,8 +9,6 @@ This project include:
 
 ## General Configuration in Docker
 
----
-
 ### Microservices
 
 1. Create Image Config Server in Docker
@@ -102,7 +100,7 @@ docker run --name redis-instance -p 6379:6379 -d redis:latest
 
 ---
 
-### Redis
+### MySQL
 
 1. Create Image Config Server in Docker
 ```  
