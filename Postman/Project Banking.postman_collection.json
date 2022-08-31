@@ -656,7 +656,7 @@
 					"name": "Product",
 					"item": [
 						{
-							"name": "Credito",
+							"name": "Create",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -690,7 +690,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"62facc8a35d79d66a54b2803\",\r\n    \"code\": \"CRE-OTR\",\r\n    \"name\": \"OTRO CREDITO 1\",\r\n    \"description\": \"OTRO CREDITO 1\",\r\n    \"codeProductType\": \"CRE\",\r\n    \"movementControl\": false,\r\n    \"movementCountMax\": 0,\r\n    \"monthlyCommission\": 0.0,\r\n    \"state\": true\r\n}",
+									"raw": "{\r\n    \"id\": \"630e69fd02b1294cf90c957a\",\r\n    \"code\": \"CRE-OTR\",\r\n    \"name\": \"OTRO CREDITO 1\",\r\n    \"description\": \"OTRO CREDITO 1\",\r\n    \"codeProductType\": \"CRE\",\r\n    \"movementControl\": false,\r\n    \"movementCountMax\": 0,\r\n    \"monthlyCommission\": 0.0,\r\n    \"state\": true\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -717,7 +717,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "localhost:8090/api/products/62facc8a35d79d66a54b2803",
+									"raw": "localhost:8090/api/products/630e69fd02b1294cf90c957a",
 									"host": [
 										"localhost"
 									],
@@ -725,7 +725,7 @@
 									"path": [
 										"api",
 										"products",
-										"62facc8a35d79d66a54b2803"
+										"630e69fd02b1294cf90c957a"
 									]
 								}
 							},
@@ -774,9 +774,22 @@
 						},
 						{
 							"name": "Find All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
 							"request": {
 								"method": "GET",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "localhost:8090/api/products",
 									"host": [
@@ -959,6 +972,26 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Actuator Health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/actuator/health",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -1088,11 +1121,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8084/api/accounts/findAllByCodeClient/CLIE-0001",
+									"raw": "localhost:8090/api/accounts/findAllByCodeClient/CLIE-0001",
 									"host": [
 										"localhost"
 									],
-									"port": "8084",
+									"port": "8090",
 									"path": [
 										"api",
 										"accounts",
@@ -1391,6 +1424,35 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Create Holder And Person",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"5414eee1-a316-40aa-be3d-ae212f6a2ab7\",\r\n    \"person\": {\r\n        \"code\": \"PERS-0005\",\r\n        \"name\": \"LUIS\",\r\n        \"lastName\": \"CUMPA\",\r\n        \"codeDocumentType\": \"DNI\",\r\n        \"documentNumber\": \"42589631\",\r\n        \"phoneNumber\": \"990675002\",\r\n        \"email\": \"lcumpa@gmail.com\",\r\n        \"state\": true\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/holders/createHolderAndPerson",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"holders",
+										"createHolderAndPerson"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -1404,7 +1466,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"accountNumber\": \"a0cf3a15-ace5-46fc-8fa9-b4d1d586b8df\",\r\n    \"codeMovementType\": \"PP\",\r\n    \"movementAmount\": 230.00\r\n}",
+									"raw": "{\r\n    \"accountNumber\": \"96b2b295-a7c3-4500-847d-bd9d91ee2dcb\",\r\n    \"codeMovementType\": \"DE\",\r\n    \"movementAmount\": 100.00\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1532,6 +1594,64 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Transfer Own Accounts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeAccountOrigin\": \"96b2b295-a7c3-4500-847d-bd9d91ee2dcb\",\r\n    \"codeAccountDestination\": \"433a3cf3-88ac-465f-b955-cdeb7272b4c6\",\r\n    \"codeTypeTransfer\": \"TB\",\r\n    \"amountTransfer\": 50.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/movements/transfer",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements",
+										"transfer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Transfer Other Accounts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"codeAccountOrigin\": \"96b2b295-a7c3-4500-847d-bd9d91ee2dcb\",\r\n    \"codeAccountDestination\": \"5414eee1-a316-40aa-be3d-ae212f6a2ab7\",\r\n    \"codeTypeTransfer\": \"TT\",\r\n    \"amountTransfer\": 50.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8090/api/movements/transfer",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"movements",
+										"transfer"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -1545,7 +1665,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"code\": \"PC\",\r\n    \"name\": \"PAGO DE CREDITO\",\r\n    \"operationType\": \"I\",\r\n    \"state\": true\r\n}",
+									"raw": "{\r\n    \"code\": \"DT\",\r\n    \"name\": \"DEPOSITO POR TRANSFERENCIA\",\r\n    \"operationType\": \"I\",\r\n    \"state\": true\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1789,6 +1909,111 @@
 									"path": [
 										"api",
 										"signers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Service Report",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/report/accounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"report",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account State",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8089/api/report/accountstates",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"report",
+										"accountstates"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Movement Type",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8089/api/report/movementtypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"report",
+										"movementtypes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account Type",
+					"item": [
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8089/api/report/accounttypes",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"api",
+										"report",
+										"accounttypes"
 									]
 								}
 							},
